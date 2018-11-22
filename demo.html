@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <span id="cutPhotoBtn">
+        拍照
+    </span>
+    <div class="wrapper" id="videoCanvasWrapper"></div>
+    <script src="js/pcCameraCtrl.js"></script>
+    <script type="text/javascript">
+        // demo
+        initPcCameraAndCut('videoCanvasWrapper').then(function (vcObj) {
+            console.log(vcObj)
+            document.getElementById('cutPhotoBtn').addEventListener('click', function () {
+                console.log(vcObj.cutImgFn())
+            })
+        })
+    </script>
+</body>
+</html>
